@@ -1,0 +1,81 @@
+:root {
+    --primary: #2563eb;
+    --text: #1f2937;
+    --bg: #f9fafb;
+    --card: #ffffff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.resume-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--card);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 { margin: 0; color: var(--primary); font-size: 2.5rem; }
+h2 { border-bottom: 2px solid var(--bg); padding-bottom: 8px; margin-top: 30px; }
+
+.subtitle { font-weight: 600; color: #6b7280; margin: 5px 0; }
+.contact-info { font-size: 0.9rem; color: #9ca3af; }
+a { color: var(--primary); text-decoration: none; }
+
+/* Counter Styling */
+.counter-badge {
+    background: #eff6ff;
+    color: var(--primary);
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #dbeafe;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: #10b981;
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skills-grid span {
+    background: var(--bg);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-align: center;
+}

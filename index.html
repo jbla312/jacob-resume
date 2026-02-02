@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Blankenship | Cloud Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="resume-container">
+        <header>
+            <h1>Jacob Blankenship</h1>
+            <p class="subtitle">Cloud Engineer & Tech Enthusiast</p>
+            <div class="contact-info">
+                <span>📍 Houston, TX</span> | 
+                <span>🔗 <a href="https://linkedin.com">LinkedIn</a></span> | 
+                <span>💻 <a href="https://github.com">GitHub</a></span>
+            </div>
+        </header>
+
+        <div class="counter-badge">
+            <span class="dot"></span>
+            Visitor Count: <span id="counter">Loading...</span>
+        </div>
+
+        <hr>
+
+        <section>
+            <h2>Professional Experience</h2>
+            <div class="item">
+                <h3>Cloud Project Lead</h3>
+                <p class="date">2024 - Present</p>
+                <ul>
+                    <li>Designed and deployed a serverless visitor counter using AWS Lambda, DynamoDB, and API Gateway.</li>
+                    <li>Automated website delivery using CloudFront and S3 with custom SSL.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications & Education</h2>
+            <div class="item">
+                <h3>AWS Certified Solutions Architect</h3>
+                <p>Amazon Web Services</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <span>AWS (S3, Lambda, DynamoDB)</span>
+                <span>Python</span>
+                <span>JavaScript</span>
+                <span>HTML/CSS</span>
+                <span>Terraform</span>
+                <span>GitHub Actions</span>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const apiURL = "https://d298ob64t1.execute-api.us-east-1.amazonaws.com/count";
+        async function getCounter() {
+            try {
+                let response = await fetch(apiURL);
+                let data = await response.json();
+                document.getElementById('counter').innerText = data.views;
+            } catch (error) {
+                console.error("Error:", error);
+                document.getElementById('counter').innerText = "N/A";
+            }
+        }
+        getCounter();
+    </script>
+</body>
+</html>
