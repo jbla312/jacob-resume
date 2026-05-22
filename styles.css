@@ -94,6 +94,19 @@ h2 { border-bottom: 2px solid var(--bg); padding-bottom: 8px; margin-top: 30px; 
 .contact-info { font-size: 0.9rem; color: var(--muted); }
 a { color: var(--primary); text-decoration: none; }
 
+/* Infrastructure Accent Note (Above the Fold) */
+.infrastructure-note {
+    font-size: 0.95rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin: 10px auto;
+    max-width: 600px;
+    background: var(--primary-light);
+    padding: 8px 16px;
+    border-radius: 6px;
+    border-left: 4px solid var(--primary);
+}
+
 /* Counter Styling */
 .counter-badge {
     background: var(--primary-light);
@@ -124,20 +137,72 @@ a { color: var(--primary); text-decoration: none; }
     100% { opacity: 1; }
 }
 
-.skills-grid, .keywords-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 10px;
-    margin-top: 15px;
+/* Summary Block Scannability Modifications */
+.summary-block {
+    margin-bottom: 25px;
 }
 
-.skills-grid span, .keywords-grid span {
-    background: var(--bg);
-    padding: 5px 12px;
-    border-radius: 6px;
+.summary-bullets {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.summary-bullets li {
+    margin-bottom: 8px;
+    list-style-type: square;
+}
+
+.highlight-pills {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.highlight-pills li {
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 6px 14px;
+    border-radius: 50px;
     font-size: 0.85rem;
-    text-align: center;
+    font-weight: 600;
     border: 1px solid var(--border);
+}
+
+/* Project Formatting Wrapper Actions */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-actions {
+    display: flex;
+    align-items: center;
+}
+
+.btn-action {
+    background: var(--primary);
+    color: white !important;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px var(--shadow);
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-action:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px var(--shadow);
 }
 
 .title-date {
@@ -163,13 +228,31 @@ a { color: var(--primary); text-decoration: none; }
     font-weight: bold;
 }
 
-.skills-category {
-    margin-bottom: 10px;
-    font-size: 0.95rem;
+/* Clean Minimalist Skills Layout */
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
 }
 
-.skills-category strong {
+.skills-line {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.skills-title {
+    font-weight: 600;
     color: var(--primary);
+    min-width: 170px;
+    flex-shrink: 0;
+}
+
+.skills-content {
+    color: var(--text);
 }
 
 .item ul {
@@ -181,11 +264,23 @@ a { color: var(--primary); text-decoration: none; }
     margin-bottom: 5px;
 }
 
+/* Responsive adjustment for smaller screens */
+@media (max-width: 600px) {
+    .skills-line {
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 5px;
+    }
+    
+    .skills-title {
+        min-width: auto;
+    }
+}
+
 /* Print Styles */
 @media print {
     body { padding: 0; background: white; color: black; }
     .resume-container { box-shadow: none; border-radius: 0; width: 100%; max-width: 100%; padding: 0; }
-    .controls, .counter-badge, #theme-toggle { display: none !important; }
-    h1, h2, .skills-category strong, .cert-list li::before { color: black !important; }
-    .skills-grid span, .keywords-grid span { border: 1px solid #eee; }
+    .controls, .counter-badge, #theme-toggle, .infrastructure-note, .project-actions { display: none !important; }
+    h1, h2, .skills-title, .cert-list li::before { color: black !important; }
 }

@@ -11,13 +11,13 @@
 
     <div class="controls">
         <button id="theme-toggle" class="btn">🌓 Toggle Theme</button>
-        <!-- <a href="Jacob_Blankenship_Resume.pdf" class="btn btn-primary" download>📄 Download PDF</a> -->
     </div>
 
     <div class="resume-container">
         <header>
             <h1>Jacob Blankenship</h1>
             <p class="subtitle">Cloud Engineer & U.S. Army Veteran</p>
+            <p class="infrastructure-note">⚡ This portfolio is a live, automated serverless application architected on AWS.</p>
             <p class="clearance">Security Clearance: Secret (Inactive)</p>
             <div class="contact-info">
                 <span>📍 Houston, TX 77084</span> | 
@@ -34,19 +34,20 @@
 
         <section>
             <h2>Professional Summary</h2>
-            <p>Innovative <strong>Cloud Engineer</strong> and U.S. Army Veteran with a B.S. in Computer Science with <strong>AWS Solutions Architect</strong> and <strong>AWS Certified Developer</strong> credentials. Proven expertise in <strong>full-stack development</strong> and legacy system modernization, now specializing in <strong>AWS cloud architecture</strong>, <strong>serverless workloads</strong>, and <strong>CI/CD automation</strong>. Experienced in deploying <strong>scalable infrastructure</strong> using <strong>Python</strong>, <strong>AWS Lambda</strong>, and <strong>GitHub Actions</strong>. Adept at bridging the gap between legacy enterprise applications and modern cloud-native solutions within highly regulated environments.</p>
-            <div class="keywords-grid">
-                <span><strong>Software Development</strong></span>
-                <span><strong>Serverless Computing</strong></span>
-                <span><strong>Database Management</strong></span>
-                <span><strong>Infrastructure as Code (IaC)</strong></span>
-                <span><strong>Cloud Infrastructure & Architecture</strong></span>
-                <span><strong>Technical Troubleshooting</strong></span>
-                <span><strong>Agile Methodologies</strong></span>
-                <span><strong>CI/CD Pipeline Automation</strong></span>
-                <span><strong>Cloud Security & Identity (IAM)</strong></span>
-                <span><strong>Legacy System Modernization</strong></span>
+            <div class="summary-block">
+                <p>Innovative <strong>Cloud Engineer</strong>, <strong>Enterprise Software Developer</strong>, and <strong>U.S. Army Veteran</strong> with a B.S. in Computer Science. Proven experience bridging the gap between legacy enterprise systems and modern cloud-native environments through security-first infrastructure automation.</p>
+                <ul class="summary-bullets">
+                    <li><strong>Cloud Architecture:</strong> Experienced in building high-availability, cost-optimized serverless backends using AWS, Python, and NoSQL databases.</li>
+                    <li><strong>DevOps & Security:</strong> Skilled in streamlining deployments via end-to-end CI/CD automation pipelines and securing network workloads using AWS WAF and strict IAM principles.</li>
+                    <li><strong>Operational Discipline:</strong> Possess a rigorous military background in crisis management, system redundancy, and mission-critical reliability applied directly to systems engineering.</li>
+                </ul>
             </div>
+            <ul class="highlight-pills">
+                <li><strong>B.S. in Computer Science</strong></li>
+                <li><strong>AWS Solutions Architect</strong></li>
+                <li><strong>AWS Certified Developer</strong></li>
+                <li><strong>U.S. Army Veteran</strong></li>
+            </ul>
         </section>
 
         <section>
@@ -64,7 +65,12 @@
         <section>
             <h2>Technical Projects (AWS & DevOps)</h2>
             <div class="item">
-                <h3>Full-Stack <strong>Serverless Portfolio</strong> (The Cloud Resume Challenge)</h3>
+                <div class="project-header">
+                    <h3>Full-Stack <strong>Serverless Portfolio</strong> (The Cloud Resume Challenge)</h3>
+                    <div class="project-actions">
+                        <a href="https://github.com/jbla312/jacob-resume" class="btn btn-action" target="_blank">↗️ View GitHub Codebase</a>
+                    </div>
+                </div>
                 <ul>
                     <li>Developed a cloud-native portfolio site using <strong>S3</strong> for static hosting and <strong>CloudFront</strong> for global content delivery (HTTPS).</li>
                     <li>Built a <strong>serverless backend</strong> with <strong>Lambda (Python)</strong> and <strong>DynamoDB</strong> to track and display visitor counts.</li>
@@ -136,26 +142,35 @@
 
         <section>
             <h2>Technical Skills</h2>
-            <div class="skills-category">
-                <strong>Cloud Services (AWS):</strong> Lambda, API Gateway, S3, SNS, SES, IAM, CloudFront, EC2, WAF, EventBridge, CloudWatch, Route 53
-            </div>
-            <div class="skills-category">
-                <strong>DevOps & Tools:</strong> GitHub Actions (CI/CD), GIT, Terraform, Cloudformation, JIRA, Confluence
-            </div>
-            <div class="skills-category">
-                <strong>Languages:</strong> Python, Java, COBOL, HTML, CSS, JavaScript
-            </div>
-            <div class="skills-category">
-                <strong>AI-Assisted Development:</strong> Claude Code CLI, Copilot, Gemini CLI
-            </div>
-            <div class="skills-category">
-                <strong>Operating Systems:</strong> Windows, Mac, Linux (Foundational)
-            </div>
-            <div class="skills-category">
-                <strong>Databases:</strong> PostgreSQL, MySQL, DynamoDB, NoSQL
-            </div>
-            <div class="skills-category">
-                <strong>Monitoring:</strong> CloudWatch Dashboards, Alarms, Logs
+            <div class="skills-wrapper">
+                <div class="skills-line">
+                    <span class="skills-title">Cloud Services (AWS):</span>
+                    <span class="skills-content">Lambda, API Gateway, S3, SNS, SES, IAM, CloudFront, EC2, WAF, EventBridge, CloudWatch, Route 53</span>
+                </div>
+                <div class="skills-line">
+                    <span class="skills-title">DevOps & Tools:</span>
+                    <span class="skills-content">GitHub Actions (CI/CD), Git, Terraform, CloudFormation, Jira, Confluence</span>
+                </div>
+                <div class="skills-line">
+                    <span class="skills-title">Languages:</span>
+                    <span class="skills-content">Python, Java, COBOL, HTML, CSS, JavaScript</span>
+                </div>
+                <div class="skills-line">
+                    <span class="skills-title">AI-Assisted Dev:</span>
+                    <span class="skills-content">Claude Code CLI, GitHub Copilot, Gemini CLI</span>
+                </div>
+                <div class="skills-line">
+                    <span class="skills-title">Operating Systems:</span>
+                    <span class="skills-content">Windows, Mac, Linux (Foundational)</span>
+                </div>
+                <div class="skills-line">
+                    <span class="skills-title">Databases:</span>
+                    <span class="skills-content">PostgreSQL, MySQL, DynamoDB, NoSQL</span>
+                </div>
+                <div class="skills-line">
+                    <span class="skills-title">Monitoring:</span>
+                    <span class="skills-content">CloudWatch Dashboards, Alarms, Logs</span>
+                </div>
             </div>
         </section>
 
